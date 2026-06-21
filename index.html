@@ -3,145 +3,300 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Angel Rodriguez | Full-Stack Devloper</title>
+
+    <title>Angel Rodríguez | Full-Stack Developer</title>
+
+    <meta name="description" content="Portafolio de Angel Rodríguez, desarrollador Full-Stack Junior especializado en aplicaciones web, APIs REST, bases de datos y sistemas administrativos." />
 
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="hero">
-        <nav class="navbar"> 
-            <h2 class="logo">Angel Rodriguez</h2>
+    <canvas id="space-bg" aria-hidden="true"></canvas>
 
-            <ul class="nav-links">
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="hero" id="home">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <span class="logo-mark">AR</span>
+                <span>Angel Rodríguez</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
+
+            <div class="theme-pill" id="themePill">
+                Auto
+            </div>
         </nav>
 
         <section class="hero-content">
-            <p class="tag">Desarrollador Full-Stack Junior</p>
-            <h1>Construyo soluciones web modernas, funcionales y con propósito.</h1>
-            <p class="description">
-                Estudiante de Ingeniería en Tecnologías de la Información y Comunicación
-                en el ITGAM, Tecnológico Nacional de México. Me especializo en desarrollo web,
-                APIs, bases de datos y sistemas administrativos.
-            </p>
+            <div class="hero-text">
+                <p class="tag">Desarrollador Full-Stack Junior</p>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary">Ver proyectos</a>
-                <a href="https://github.com/profinance91-source" target="_blank" class="btn secondary">
-                    Github
-                </a>
+                <h1>
+                    Construyo sistemas web con lógica,
+                    diseño y una saludable desconfianza
+                    hacia el código mal hecho.
+                </h1>
+
+                <p class="description">
+                    Estudiante de Ingeniería en Tecnologías de la Información y Comunicación
+                    en el ITGAM, Tecnológico Nacional de México. Me especializo en desarrollo web,
+                    APIs REST, bases de datos y sistemas administrativos.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">Ver proyectos</a>
+                    <a href="https://github.com/luxarcad" target="_blank" rel="noopener noreferrer" class="btn secondary">
+                        GitHub
+                    </a>
+                </div>
             </div>
+
+            <aside class="hero-card">
+                <div class="card-top">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+
+                <div class="code-block">
+                    <p><span class="code-muted">const</span> developer = {</p>
+                    <p>&nbsp;&nbsp;name: <span>"Angel Rodríguez"</span>,</p>
+                    <p>&nbsp;&nbsp;role: <span>"Full-Stack Junior"</span>,</p>
+                    <p>&nbsp;&nbsp;stack: <span>["Python", "FastAPI", "MySQL", "JS"]</span>,</p>
+                    <p>&nbsp;&nbsp;status: <span>"building..."</span></p>
+                    <p>};</p>
+                </div>
+
+                <div class="tech-row">
+                    <span>FastAPI</span>
+                    <span>MySQL</span>
+                    <span>JavaScript</span>
+                    <span>C#</span>
+                </div>
+            </aside>
         </section>
+
+        <a href="#about" class="scroll-indicator" aria-label="Ir a sobre mí">
+            <span></span>
+        </a>
     </header>
 
     <main>
+        <section id="about" class="section about-section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Perfil</p>
+                <h2>Sobre mí</h2>
+            </div>
 
-        <section id="about" class="section">
-            <h2>Sobre mí</h2>
-            <p>
-                Soy estudiante de segundo semestre de Ingeniería en Tecnologías de la Información
-                y Comunicación en el Instituto Tecnológico Gustavo A. Madero. Me interesa el
-                desarrollo Full-Stack, la creación de sistemas útiles y la construcción de interfaces
-                limpias, modernas y responsivas.
-            </p>
-            <p>
-                Tengo experiencia desarrollando sitios web, sistemas administrativos, APIs REST,
-                conexión con bases de datos y proyectos con tecnologías como Python, FastAPI,
-                MySQL, JavaScript, HTML, CSS y C#.
-            </p>
-        </section>
+            <div class="about-grid">
+                <div class="about-text glass-panel">
+                    <p>
+                        Soy estudiante de segundo semestre de Ingeniería en Tecnologías de la Información
+                        y Comunicación en el Instituto Tecnológico Gustavo A. Madero. Me interesa el
+                        desarrollo Full-Stack, la creación de sistemas útiles y la construcción de interfaces
+                        limpias, modernas y responsivas.
+                    </p>
 
-        <section id="skills" class="section">
-            <h2>Habilidades técnicas</h2>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Front-End</h3>
-                    <p>HTML5, CSS3, JavaScript, Responsive Design, Bootstrap, Three.js, GSAP.</p>
+                    <p>
+                        Tengo experiencia desarrollando sitios web, sistemas administrativos, APIs REST,
+                        conexión con bases de datos y proyectos con tecnologías como Python, FastAPI,
+                        MySQL, JavaScript, HTML, CSS y C#.
+                    </p>
                 </div>
 
-                <div class="skill-card">
-                    <h3>Back-End</h3>
-                    <p>Python, FastAPI, APIs REST, JSON, arquitectura cliente-servidor.</p>
-                </div>
+                <div class="stats-grid">
+                    <article class="stat-card">
+                        <strong>Full-Stack</strong>
+                        <span>Front-End + Back-End</span>
+                    </article>
 
-                <div class="skill-card">
-                    <h3>Bases de datos</h3>
-                    <p>MySQL, SQL, diseño de bases de datos relacionales.</p>
-                </div>
+                    <article class="stat-card">
+                        <strong>APIs REST</strong>
+                        <span>FastAPI y JSON</span>
+                    </article>
 
-                <div class="skill-card">
-                    <h3>Herramientas</h3>
-                    <p>Git, GitHub, Visual Studio, Visual Studio Code, Postman y Office.</p>
+                    <article class="stat-card">
+                        <strong>MySQL</strong>
+                        <span>Bases relacionales</span>
+                    </article>
+
+                    <article class="stat-card">
+                        <strong>UI Web</strong>
+                        <span>Responsive Design</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <h2>Proyectos destacados</h2>
+        <section id="skills" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Stack</p>
+                <h2>Habilidades técnicas</h2>
+            </div>
 
-            <div class="proyects-grid">
+            <div class="skills-grid">
+                <article class="skill-card magnetic-card">
+                    <span class="card-icon">01</span>
+                    <h3>Front-End</h3>
+                    <p>HTML5, CSS3, JavaScript, Responsive Design, Bootstrap, Three.js y GSAP.</p>
+                </article>
 
-                <article class="project-card">
+                <article class="skill-card magnetic-card">
+                    <span class="card-icon">02</span>
+                    <h3>Back-End</h3>
+                    <p>Python, FastAPI, APIs REST, JSON y arquitectura cliente-servidor.</p>
+                </article>
+
+                <article class="skill-card magnetic-card">
+                    <span class="card-icon">03</span>
+                    <h3>Bases de datos</h3>
+                    <p>MySQL, SQL y diseño de bases de datos relacionales.</p>
+                </article>
+
+                <article class="skill-card magnetic-card">
+                    <span class="card-icon">04</span>
+                    <h3>Herramientas</h3>
+                    <p>Git, GitHub, Visual Studio, Visual Studio Code, Postman y Office.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Trabajo real</p>
+                <h2>Proyectos destacados</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card magnetic-card">
+                    <div class="project-header">
+                        <span class="project-number">01</span>
+                        <span class="project-status">En desarrollo</span>
+                    </div>
+
                     <h3>Sistema Médico con IA</h3>
+
                     <p>
                         Sistema Full-Stack para gestión de pacientes, expedientes médicos,
                         carga de documentos PDF e imágenes, e integración de inteligencia
                         artificial para generar resúmenes clínicos.
                     </p>
-                    <span>FastAPI - MYSQL - JavaScript - IA</span>
+
+                    <div class="project-tags">
+                        <span>FastAPI</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                        <span>IA</span>
+                    </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card magnetic-card">
+                    <div class="project-header">
+                        <span class="project-number">02</span>
+                        <span class="project-status">Full-Stack</span>
+                    </div>
+
                     <h3>Sistema de Cursos y Talleres</h3>
+
                     <p>
                         Plataforma para administración de alumnos, docentes, talleres, pagos,
                         asistencias, códigos QR, constancias PDF e importación de datos desde Excel.
                     </p>
-                    <span>Python · FastAPI · MySQL · HTML · CSS · JS</span>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>MySQL</span>
+                        <span>PDF</span>
+                    </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card magnetic-card featured-project">
+                    <div class="project-header">
+                        <span class="project-number">03</span>
+                        <span class="project-status">Privado</span>
+                    </div>
+
                     <h3>Sistema Administrativo para Taxis</h3>
+
                     <p>
                         Sistema para gestión de conductores, vehículos, servicios, pagos,
                         gastos operativos y dashboard con métricas administrativas.
                     </p>
-                    <span>API REST · MySQL · JavaScript</span>
+
+                    <div class="project-tags">
+                        <span>API REST</span>
+                        <span>MySQL</span>
+                        <span>JavaScript</span>
+                        <span>Dashboard</span>
+                    </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card magnetic-card">
+                    <div class="project-header">
+                        <span class="project-number">04</span>
+                        <span class="project-status">Desktop</span>
+                    </div>
+
                     <h3>Aplicaciones de Escritorio</h3>
+
                     <p>
                         Proyectos de escritorio en C# orientados al manejo de archivos,
                         interfaces gráficas y herramientas de productividad.
                     </p>
-                    <span>C# · .NET · Visual Studio</span>
+
+                    <div class="project-tags">
+                        <span>C#</span>
+                        <span>.NET</span>
+                        <span>Visual Studio</span>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="contact" class="section contact">
-            <h2>Contacto</h2>
-            <p>
-                Actualmente estoy construyendo proyectos Full-Stack y ampliando mi experiencia
-                como desarrollador.
-            </p>
+        <section id="contact" class="section contact reveal">
+            <div class="contact-card">
+                <p class="eyebrow">Contacto</p>
 
-            <div class="contact-links">
-                <a href="https://github.com/profinance91-source/" target="_blank">GitHub</a>
-                <a href="mailto:angelrodrig82uez9@gmail.com">Correo</a>
+                <h2>¿Construimos algo útil?</h2>
+
+                <p>
+                    Actualmente estoy desarrollando proyectos Full-Stack y ampliando mi experiencia
+                    como desarrollador. También sobrevivo a Git, lo cual ya debería contar como habilidad profesional.
+                </p>
+
+                <div class="contact-links">
+                    <a href="https://github.com/luxarcad" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:angelrodrig82uez9@gmail.com">Correo</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Angel Rodriguez. Desarrollado con HTML, CSS y JavaScript.</p>
+        <p>© 2026 Angel Rodríguez. Desarrollado con HTML, CSS, JavaScript, GSAP y Three.js.</p>
     </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 
     <script src="script.js"></script>
 </body>
